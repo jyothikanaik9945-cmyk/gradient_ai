@@ -1,0 +1,33 @@
+{
+  "personas": [
+    {
+      "name": "The Stable User (Baseline Building)",
+      "goal": "Show the judges how the EMA smoothing prevents false positives.",
+      "interactions": [
+        {"text": "Hey, just logging in to do my daily check-in.", "metrics": {"speed": 65, "backspaces": 1, "latency": 150}, "hour": 10},
+        {"text": "Work was pretty standard today. Nothing crazy.", "metrics": {"speed": 68, "backspaces": 2, "latency": 145}, "hour": 14},
+        {"text": "Thinking about what to make for dinner.", "metrics": {"speed": 70, "backspaces": 0, "latency": 140}, "hour": 18}
+      ],
+      "expected_outcome": "Risk stays below 0.2. Z-Score stays near 0.0. UI remains calm."
+    },
+    {
+      "name": "The Masker (The 'Fake Smile')",
+      "goal": "Demonstrate the core killer feature: multimodal contradiction.",
+      "interactions": [
+        {"text": "Honestly, everything is completely fine!", "metrics": {"speed": 22, "backspaces": 14, "latency": 480}, "hour": 15},
+        {"text": "I am having a really great time today, no worries.", "metrics": {"speed": 18, "backspaces": 19, "latency": 550}, "hour": 15}
+      ],
+      "expected_outcome": "Triggers 'MASKING DETECTED' alert. Triggers 'GROUNDING_EXERCISE_54321'."
+    },
+    {
+      "name": "The Night Spiral (The SOS Trigger)",
+      "goal": "Show temporal risk escalation, the night multiplier, and the fail-safe override.",
+      "interactions": [
+        {"text": "Can't sleep. My mind is just racing right now.", "metrics": {"speed": 45, "backspaces": 5, "latency": 250}, "hour": 2},
+        {"text": "I just feel like everything is falling apart.", "metrics": {"speed": 35, "backspaces": 12, "latency": 350}, "hour": 3},
+        {"text": "I can't do this anymore. It's too much.", "metrics": {"speed": 15, "backspaces": 25, "latency": 600}, "hour": 3}
+      ],
+      "expected_outcome": "Risk crosses 0.70. Triggers 'CRISIS_HOTLINE_MODAL' instantly."
+    }
+  ]
+}
